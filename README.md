@@ -9,4 +9,4 @@ Contact
 
 
   [email]: mailto:kyle.paul.leblanc@gmail.com
-  [logo]: (https://github.com/leblanck/macOS-Scripts/Resources/Apple-Logo-rainbow-small.png)
+  [logo]: https://github.com/leblanck/macOS-Scripts/Resources/Apple-Logo-rainbow-small.png
