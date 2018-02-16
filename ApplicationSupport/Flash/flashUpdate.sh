@@ -8,16 +8,18 @@
 # Last Edit: 3/21/17    #
 #########################
 
+#https://fpdownload.adobe.com/get/flashplayer/pdc/25.0.0.148/install_flash_player_osx.dmg
+
 
 dmgfile="flash.dmg"
 volname="Flash"
 logfile="/Library/Logs/FlashUpdateScript.log"
 
 
-    latestver=`/usr/bin/curl -s http://www.adobe.com/software/flash/about/ | sed -n '/Safari/,/<\/tr/s/[^>]*>\([0-9].*\)<.*/\1/p' | grep 2 | awk 'NR==1{print $1; exit}'`
+    latestver=`/usr/bin/curl -s http://get.adobe.com/flashplayer/about/ | sed -n '/Safari/,/<\/tr/s/[^>]*>\([0-9].*\)<.*/\1/p' | grep 2 | awk 'NR==1{print $1; exit}'`
     # Get the version number of the currently-installed Flash Player, if any.
     shortver=${latestver:0:2}
-    url=http://fpdownload.macromedia.com/get/flashplayer/current/licensing/mac/install_flash_player_"${shortver}"_osx.dmg
+    url=https://fpdownload.adobe.com/get/flashplayer/pdc/"${latestver}"/install_flash_player_osx.dmg
     currentinstalledver=`/usr/bin/defaults read "/Library/Internet Plug-Ins/Flash Player.plugin/Contents/version" CFBundleShortVersionString`
     # Compare the two versions, if they are different of Flash is not present then download and install the new version.
     if [ "${currentinstalledver}" != "${latestver}" ]; then
