@@ -1,6 +1,6 @@
 Overview
 ========
-![alt text][logo]
+<p align="center"><img width=30% src="https://raw.githubusercontent.com/leblanck/macOS-Scripts/master/Resources/Apple-Logo-rainbow-small.png"></p>
 
  Scripts Guide
 ================
