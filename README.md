@@ -2,7 +2,8 @@ Overview
 ========
 <p align="center"><img width=30% src="https://raw.githubusercontent.com/leblanck/macOS-Scripts/master/Resources/Apple-Logo-rainbow-small.png"></p>
 
- Scripts Guide
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Scripts Guide
 ================
 This repo is inteneded to store scripts used in the macOS environment. Scipts include any .sh files used in policies, extension attributes, and package installations (pre/post). 
 
