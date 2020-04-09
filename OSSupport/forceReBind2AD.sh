@@ -15,6 +15,7 @@ jamfAPIEncPass=$(echo ${4}) #Called from Jamf
 jamfAPISalt=""
 jamfAPIPassPhrase=""
 jamfBindPolicyID=""
+ntpServerName="" #Enter NTP Server here to sync time (Optional if not using Apple's NTP)
 correctDomainName="" #Enter correct domain name here to do checks against
 serviceAccountName="" #Service account used to do user lookup in AD
 compName=$(hostname)
@@ -65,9 +66,15 @@ rebind(){
     done
 }
 
-setPassInterval() {
+configADOptions() {
     echo "========== Changing passInterval to 0..."
     sudo -u $userName dsconfigad -passinterval 0
+    
+    if [[ "$ntpServerName" != "" ]]; then
+    	echo "========== Syncing Time Server..."
+    	sudo sntp -sS $ntpServerName
+    fi
+    
     rebind
 }
 
@@ -80,7 +87,7 @@ unbind() {
          exit 1
     else 
         echo "========== Unbound succesfully..."
-        setPassInterval
+        configADOptions
      fi
 }   
 
